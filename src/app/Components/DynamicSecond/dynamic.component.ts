@@ -17,7 +17,6 @@ export default class DynamicComponent {
     @ViewChild("dynamicContainer", {read: ViewContainerRef}) dynamicContainer: ViewContainerRef;
 
     @Input() set components(data: {component: any}){
-        console.log(data);
         if(!data){
             return;
         }
