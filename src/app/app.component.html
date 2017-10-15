@@ -1,0 +1,13 @@
+﻿<div id="dynamic">
+  <div id="opts">
+    <h3>Dynamic components</h3>
+    <button (click)="loadNew()">Open new</button>
+    <button (click)= "logAll()">Log values</button>
+    <dynamic-component [(components)]="elements" *ngIf="setComponents"></dynamic-component>
+  </div>
+  <div id="res" *ngIf="AllElements[0] != null">
+    <div *ngFor="let res of AllElements">
+        <label>{{res}}</label>
+    </div>
+  </div>
+</div>
